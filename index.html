@@ -6,289 +6,134 @@
     <title>Việc Vặt - Dịch vụ quản trị website & tự động hóa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .blue-gradient {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
-        }
-        .slider {
-            height: 500px;
-            background-size: cover;
-            background-position: center;
-            transition: background-image 0.5s ease-in-out;
-        }
-        @media (max-width: 768px) {
-            .slider {
-                height: 300px;
-            }
-        }
-        .utility-card {
-            transition: all 0.3s ease;
-        }
-        .utility-card:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <link rel="icon" href="Images/Favicon.png" type="image/png">
+    <link rel="stylesheet" href="Css/style.css">
 </head>
-<body class="font-sans bg-white">
+<body>
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="https://yt3.ggpht.com/AlTBcQJCEqM8sYFJ5zu8kUzmlAddrzytxathmaKM1vwsnry3xDUVqSN9iN_8xwa0G8z0anbcUQ=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="Logo" class="h-8 w-auto mr-3">
-                <div class="text-xl font-bold text-blue-600">VIỆC VẶT</div>
+            <a href="#"><img src="Images/Logo-Header.png" alt="Logo" class="h-10 w-auto"></a>
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#about" class="text-gray-800 text-xl font-bold pb-1 hover:text-[--brand-blue] transition-colors duration-200">Giới thiệu</a>
+                <a href="#services" class="text-gray-800 text-xl font-bold pb-1 hover:text-[--brand-blue] transition-colors duration-200">Dịch vụ</a>
+                <a href="#utilities" class="text-gray-800 text-xl font-bold pb-1 hover:text-[--brand-blue] transition-colors duration-200">Tiện ích</a>
+                <a href="#contact" class="text-gray-800 text-xl font-bold pb-1 hover:text-[--brand-blue] transition-colors duration-200">Liên hệ</a>
             </div>
-            
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-blue-600 hover:text-blue-800 font-medium">Giới thiệu</a>
-                <a href="#services" class="text-blue-600 hover:text-blue-800 font-medium">Dịch vụ</a>
-                <a href="#utilities" class="text-blue-600 hover:text-blue-800 font-medium">Tiện ích</a>
-                <a href="#contact" class="text-blue-600 hover:text-blue-800 font-medium">Liên hệ</a>
-            </div>
-            
             <div class="flex items-center">
-                <div class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full font-medium">
+                <div class="hidden sm:block bg-blue-100 text-[--brand-blue] px-4 py-2 rounded-full font-semibold">
                     <i class="fas fa-phone-alt mr-2"></i> 0911.625.718
                 </div>
-                <button class="md:hidden ml-4 text-blue-600" id="mobile-menu-button">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
+                <button class="md:hidden ml-4 text-[--brand-blue]" id="mobile-menu-button"><i class="fas fa-bars text-2xl"></i></button>
             </div>
         </div>
-        
         <div class="md:hidden hidden bg-white w-full px-4 py-2 shadow-md" id="mobile-menu">
-            <a href="#about" class="block py-2 text-blue-600 hover:text-blue-800">Giới thiệu</a>
-            <a href="#services" class="block py-2 text-blue-600 hover:text-blue-800">Dịch vụ</a>
-            <a href="#utilities" class="block py-2 text-blue-600 hover:text-blue-800">Tiện ích</a>
-            <a href="#contact" class="block py-2 text-blue-600 hover:text-blue-800">Liên hệ</a>
+            <a href="#about" class="block py-2 text-gray-900 hover:text-[--brand-blue]">Giới thiệu</a>
+            <a href="#services" class="block py-2 text-gray-900 hover:text-[--brand-blue]">Dịch vụ</a>
+            <a href="#utilities" class="block py-2 text-gray-900 hover:text-[--brand-blue]">Tiện ích</a>
+            <a href="#contact" class="block py-2 text-gray-900 hover:text-[--brand-blue]">Liên hệ</a>
         </div>
     </header>
 
-    <div class="slider blue-gradient flex items-center justify-center text-white">
-        <div class="text-center px-4">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">GIẢI PHÁP CÔNG NGHỆ CHO DOANH NGHIỆP</h1>
-            <p class="text-xl mb-8">Tự động hóa công việc, tối ưu hiệu suất với các dịch vụ chuyên nghiệp</p>
-            <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-blue-100 transition duration-300">LIÊN HỆ NGAY</a>
+    <div class="slider flex items-end">
+        <div class="hidden md:block w-full bg-black bg-opacity-60 text-white p-6">
+            <div class="container mx-auto">
+                <h1 class="text-4xl font-serif font-bold mb-2">GIẢI PHÁP CÔNG NGHỆ CHO DOANH NGHIỆP</h1>
+                <p class="text-lg">Tự động hóa công việc, tối ưu hiệu suất với các dịch vụ chuyên nghiệp</p>
+            </div>
         </div>
     </div>
 
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">VỀ VIỆC VẶT</h2>
-                <div class="w-20 h-1 bg-blue-400 mx-auto mb-6"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto text-center">
-                <p class="text-gray-700 text-lg mb-6">
-                    Việc Vặt là đơn vị chuyên hỗ trợ xử lý các công việc lặt vặt về công nghệ cho doanh nghiệp. Chúng tôi hỗ trợ 2 nhóm chính là Quản trị Website, Quản trị Fanpage và Xử lý các tác vụ để giúp bạn "tách" ra khỏi "vũng lầy" việc vặt.
-                </p>
-            </div>
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-7xl text-center">
+            <p class="text-gray-700 text-lg leading-relaxed">
+                Bạn đang tìm kiếm một giải pháp đáng tin cậy để tinh giản các quy trình vận hành? <span class="text-[--brand-blue] font-semibold">Việc Vặt</span> chính là lựa chọn dành cho bạn. Chúng tôi chuyên sâu trong việc cung cấp các dịch vụ quản trị website chuyên nghiệp, đảm bảo sự ổn định và hiệu suất cao cho nền tảng trực tuyến của bạn. Đồng thời, <span class="text-[--brand-blue] font-semibold">Việc Vặt</span> cũng giúp bạn xây dựng và duy trì sự hiện diện mạnh mẽ trên mạng xã hội thông qua dịch vụ quản trị Fanpage toàn diện. Ngoài ra, việc xử lý hàng loạt file dữ liệu gây lãng phí thời gian của bạn sẽ không còn là vấn đề khi có đội ngũ của chúng tôi hỗ trợ. Đặc biệt, chúng tôi còn có khả năng phát triển các công cụ tự động hóa tùy chỉnh, giúp doanh nghiệp của bạn hoạt động mượt mà và hiệu quả hơn bao giờ hết. Với <span class="text-[--brand-blue] font-semibold">Việc Vặt</span>, những công việc "lặt vặt" sẽ được xử lý một cách chuyên nghiệp, giúp bạn tập trung hoàn toàn vào sự phát triển bền vững của doanh nghiệp.
+            </p>
         </div>
     </section>
 
-    <section id="services" class="py-16 bg-gray-50">
+    <section id="services" class="py-20">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">DỊCH VỤ CỦA CHÚNG TÔI</h2>
-                <div class="w-20 h-1 bg-blue-400 mx-auto mb-6"></div>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[--brand-blue] mb-4">DỊCH VỤ CỦA CHÚNG TÔI</h2>
+                <div class="w-20 h-1 bg-[--brand-blue] mx-auto mb-6"></div>
                 <p class="text-gray-600 max-w-2xl mx-auto">Các dịch vụ chuyên nghiệp giúp doanh nghiệp của bạn vận hành hiệu quả hơn</p>
             </div>
-            
-            <div class="flex flex-col md:flex-row items-center mb-16 bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Quản trị Website" class="w-full h-full object-cover">
-                </div>
-                <div class="md:w-1/2 p-8">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Quản trị Website</h3>
-                    <p class="text-gray-700 mb-4">
-                        Website bạn không có nội dung, bạn không có thời gian chăm sóc, theo dõi hay không biết cách phát triển? Dịch vụ này sẽ hỗ trợ bạn tất cả các điều đó, đảm bảo website luôn có nội dung chỉnh chu để tự tin giới thiệu đến khách hàng.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row-reverse items-center mb-16 bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Quản trị Fanpage" class="w-full h-full object-cover">
-                </div>
-                <div class="md:w-1/2 p-8">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Quản trị Fanpage</h3>
-                    <p class="text-gray-700 mb-4">
-                        Bạn mới tạo Fanpage hoặc đã tạo lâu nhưng không biết đăng gì? Hãy để Việc Vặt giúp bạn xây dựng một trang Fanpage uy tín với nội dung đầy đủ và hình ảnh chuyên nghiệp.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center mb-16 bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Xử lý file hàng loạt" class="w-full h-full object-cover">
-                </div>
-                <div class="md:w-1/2 p-8">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Xử lý file hàng loạt</h3>
-                    <p class="text-gray-700 mb-4">
-                        Bạn tốn hàng giờ cho các công việc đơn giản như chèn logo, chỉnh kích thước ảnh? Nếu chi phí thuê nhân sự là quá cao, hãy để Việc Vặt hỗ trợ bạn như một nhân viên bán thời gian với chi phí vô cùng phải chăng.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row-reverse items-center bg-white rounded-xl shadow-lg overflow-hidden service-card transition duration-300">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Công cụ tự động hóa" class="w-full h-full object-cover">
-                </div>
-                <div class="md:w-1/2 p-8">
-                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Công cụ tự động hóa</h3>
-                    <p class="text-gray-700 mb-4">
-                        Các công việc lặp đi lặp lại hàng ngày chiếm quá nhiều thời gian của bạn? Với dịch vụ xây dựng công cụ tự động hóa, bạn chỉ cần vài thao tác cơ bản, công cụ sẽ xử lý từ A-Z và bạn chỉ cần xem lại kết quả.
-                    </p>
-                </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="service-card flex flex-col md:flex-row items-center"><div class="md:w-2/5 p-4"><img src="Images/Quan-tri-web.jpg" alt="Quản trị Website" class="w-full h-auto rounded-lg"></div><div class="md:w-3/5 p-6"><h3 class="text-2xl font-bold text-gray-800 mb-4">Quản trị Website</h3><p class="text-gray-700">Website bạn không có nội dung, bạn không có thời gian chăm sóc, theo dõi hay không biết cách phát triển? Dịch vụ này sẽ hỗ trợ bạn tất cả các điều đó, đảm bảo website luôn có nội dung chỉnh chu để tự tin giới thiệu đến khách hàng.</p></div></div>
+                <div class="service-card flex flex-col md:flex-row items-center"><div class="md:w-2/5 p-4"><img src="Images/Quan-tri-fanpage.jpg" alt="Quản trị Fanpage" class="w-full h-auto rounded-lg"></div><div class="md:w-3/5 p-6"><h3 class="text-2xl font-bold text-gray-800 mb-4">Quản trị Fanpage</h3><p class="text-gray-700">Bạn mới tạo Fanpage hoặc đã tạo lâu nhưng không biết đăng gì? Hãy để <span class="text-[--brand-blue] font-semibold">Việc Vặt</span> giúp bạn xây dựng một trang Fanpage uy tín với nội dung đầy đủ và hình ảnh chuyên nghiệp.</p></div></div>
+                <div class="service-card flex flex-col md:flex-row items-center"><div class="md:w-2/5 p-4"><img src="Images/Xu-ly-file-hang-loat.jpg" alt="Xử lý file hàng loạt" class="w-full h-auto rounded-lg"></div><div class="md:w-3/5 p-6"><h3 class="text-2xl font-bold text-gray-800 mb-4">Xử lý file hàng loạt</h3><p class="text-gray-700">Bạn tốn hàng giờ cho các công việc đơn giản như chèn logo, chỉnh kích thước ảnh? Nếu chi phí thuê nhân sự là quá cao, hãy để <span class="text-[--brand-blue] font-semibold">Việc Vặt</span> hỗ trợ bạn như một nhân viên bán thời gian với chi phí vô cùng phải chăng.</p></div></div>
+                <div class="service-card flex flex-col md:flex-row items-center"><div class="md:w-2/5 p-4"><img src="Images/Cong-cu-tu-dong-hoa.jpg" alt="Công cụ tự động hóa" class="w-full h-auto rounded-lg"></div><div class="md:w-3/5 p-6"><h3 class="text-2xl font-bold text-gray-800 mb-4">Công cụ tự động hóa</h3><p class="text-gray-700">Các công việc lặp đi lặp lại hàng ngày chiếm quá nhiều thời gian của bạn? Với dịch vụ xây dựng công cụ tự động hóa, bạn chỉ cần vài thao tác cơ bản, công cụ sẽ xử lý từ A-Z và bạn chỉ cần xem lại kết quả.</p></div></div>
             </div>
         </div>
     </section>
 
-    <section id="utilities" class="py-16 bg-white">
+    <section id="utilities" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">TIỆN ÍCH MIỄN PHÍ</h2>
-                <div class="w-20 h-1 bg-blue-400 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">Đây là các công cụ được tạo bởi Việc Vặt, bạn có thể sử dụng chúng hoàn toàn miễn phí, không cần phải thanh toán hay làm thêm bất cứ điều gì nữa.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[--brand-blue] mb-4">TIỆN ÍCH MIỄN PHÍ</h2>
+                <div class="w-20 h-1 bg-[--brand-blue] mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Đây là các công cụ được tạo bởi <span class="text-[--brand-blue] font-semibold">Việc Vặt</span>, bạn có thể sử dụng chúng hoàn toàn miễn phí, không cần phải thanh toán hay làm thêm bất cứ điều gì nữa.</p>
             </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <a href="https://youtu.be/Lv4R0j05tuk" target="_blank" class="utility-card blue-gradient rounded-lg p-6 text-center text-white h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3"><i class="fas fa-paint-brush"></i></div>
-                    <h3 class="text-xl font-bold">Tạo họa tiết</h3>
-                </a>
-                
-                <a href="https://youtu.be/UPP7pO8ry70" target="_blank" class="utility-card blue-gradient rounded-lg p-6 text-center text-white h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3"><i class="fas fa-key"></i></div>
-                    <h3 class="text-xl font-bold">Tạo mật khẩu ngẫu nhiên</h3>
-                </a>
-                
-                <a href="https://youtu.be/ODCvmni1Vtg" target="_blank" class="utility-card blue-gradient rounded-lg p-6 text-center text-white h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3"><i class="fas fa-file-pdf"></i></div>
-                    <h3 class="text-xl font-bold">Hỗ trợ chuyển file pdf</h3>
-                </a>
-                
-                <a href="https://youtube.com/shorts/oaT4ohY4VPU" target="_blank" class="utility-card blue-gradient rounded-lg p-6 text-center text-white h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3"><i class="fas fa-sync-alt"></i></div>
-                    <h3 class="text-xl font-bold">Vòng quay may mắn</h3>
-                </a>
-                
-                <a href="https://youtube.com/shorts/ue4bGmXbBfI" target="_blank" class="utility-card blue-gradient rounded-lg p-6 text-center text-white h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3"><i class="fas fa-search"></i></div>
-                    <h3 class="text-xl font-bold">Scan pdf</h3>
-                </a>
-                
-                <div class="utility-card bg-blue-50 rounded-lg p-6 text-center h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3 text-blue-400"><i class="fas fa-cogs"></i></div>
-                    <h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3>
-                </div>
-                <div class="utility-card bg-blue-50 rounded-lg p-6 text-center h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3 text-blue-400"><i class="fas fa-cogs"></i></div>
-                    <h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3>
-                </div>
-                <div class="utility-card bg-blue-50 rounded-lg p-6 text-center h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3 text-blue-400"><i class="fas fa-cogs"></i></div>
-                    <h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3>
-                </div>
-                 <div class="utility-card bg-blue-50 rounded-lg p-6 text-center h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3 text-blue-400"><i class="fas fa-cogs"></i></div>
-                    <h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3>
-                </div>
-                <div class="utility-card bg-blue-50 rounded-lg p-6 text-center h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3 text-blue-400"><i class="fas fa-cogs"></i></div>
-                    <h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3>
-                </div>
-                 <div class="utility-card bg-blue-50 rounded-lg p-6 text-center h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3 text-blue-400"><i class="fas fa-cogs"></i></div>
-                    <h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3>
-                </div>
-                 <div class="utility-card bg-blue-50 rounded-lg p-6 text-center h-40 flex flex-col justify-center">
-                    <div class="text-3xl mb-3 text-blue-400"><i class="fas fa-cogs"></i></div>
-                    <h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3>
-                </div>
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="https://youtu.be/Lv4R0j05tuk" target="_blank" class="bg-[--brand-blue] hover:bg-blue-700 text-white rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center transition-transform hover:scale-105"><div class="text-3xl mb-3"><i class="fas fa-paint-brush"></i></div><h3 class="text-xl font-bold">Tạo họa tiết</h3></a>
+                <a href="https://youtu.be/UPP7pO8ry70" target="_blank" class="bg-[--brand-blue] hover:bg-blue-700 text-white rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center transition-transform hover:scale-105"><div class="text-3xl mb-3"><i class="fas fa-key"></i></div><h3 class="text-xl font-bold">Tạo mật khẩu ngẫu nhiên</h3></a>
+                <a href="https://youtu.be/ODCvmni1Vtg" target="_blank" class="bg-[--brand-blue] hover:bg-blue-700 text-white rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center transition-transform hover:scale-105"><div class="text-3xl mb-3"><i class="fas fa-file-pdf"></i></div><h3 class="text-xl font-bold">Hỗ trợ chuyển file pdf</h3></a>
+                <a href="https://youtube.com/shorts/oaT4ohY4VPU" target="_blank" class="bg-[--brand-blue] hover:bg-blue-700 text-white rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center transition-transform hover:scale-105"><div class="text-3xl mb-3"><i class="fas fa-sync-alt"></i></div><h3 class="text-xl font-bold">Vòng quay may mắn</h3></a>
+                <a href="https://youtube.com/shorts/ue4bGmXbBfI" target="_blank" class="bg-[--brand-blue] hover:bg-blue-700 text-white rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center transition-transform hover:scale-105"><div class="text-3xl mb-3"><i class="fas fa-search"></i></div><h3 class="text-xl font-bold">Scan pdf</h3></a>
+                <div class="bg-gray-200 rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center"><div class="text-3xl mb-3 text-gray-400"><i class="fas fa-cogs"></i></div><h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3></div>
+                <div class="bg-gray-200 rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center"><div class="text-3xl mb-3 text-gray-400"><i class="fas fa-cogs"></i></div><h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3></div>
+                <div class="bg-gray-200 rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center"><div class="text-3xl mb-3 text-gray-400"><i class="fas fa-cogs"></i></div><h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3></div>
+                <div class="bg-gray-200 rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center"><div class="text-3xl mb-3 text-gray-400"><i class="fas fa-cogs"></i></div><h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3></div>
+                <div class="bg-gray-200 rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center"><div class="text-3xl mb-3 text-gray-400"><i class="fas fa-cogs"></i></div><h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3></div>
+                <div class="bg-gray-200 rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center"><div class="text-3xl mb-3 text-gray-400"><i class="fas fa-cogs"></i></div><h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3></div>
+                <div class="bg-gray-200 rounded-lg p-6 text-center h-40 flex flex-col justify-center items-center"><div class="text-3xl mb-3 text-gray-400"><i class="fas fa-cogs"></i></div><h3 class="text-xl font-bold text-gray-400">Đang cập nhật</h3></div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="bg-gray-900 text-white py-12">
+    <footer id="contact" class="bg-white pt-16 pb-8 border-t">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="flex items-center">
-                    <img src="https://yt3.ggpht.com/AlTBcQJCEqM8sYFJ5zu8kUzmlAddrzytxathmaKM1vwsnry3xDUVqSN9iN_8xwa0G8z0anbcUQ=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="Việc Vặt Logo" class="h-12 w-auto mr-4">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white">VIỆC VẶT</h3>
-                        <p class="text-gray-400 mt-1">
-                           Cung cấp giải pháp công nghệ giúp tự động hóa và tối ưu hóa quy trình làm việc cho doanh nghiệp.
-                        </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="flex items-center gap-6">
+                    <img src="Images/Logo-Footer.png" alt="Việc Vặt Logo" class="h-20 w-auto flex-shrink-0">
+                    <p class="text-gray-600">
+                       Cung cấp các giải pháp công nghệ, giải pháp tự động hóa cho các đơn vị kinh doanh, doanh nghiệp, giúp quý khách thoát khỏi các công việc lặt vặt để tập trung vào chuyên môn, các công việc quan trọng của mình.
+                    </p>
+                </div>
+                <div class="w-full">
+                    <div class="bg-gray-100 p-8 rounded-lg">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">KÊNH LIÊN HỆ</h3>
+                            <div class="flex space-x-6">
+                                <a href="https://www.facebook.com/viecvat/" target="_blank" class="text-gray-500 hover:text-blue-600 transition-transform duration-200 hover:scale-110"><i class="fab fa-facebook-f text-3xl"></i></a>
+                                <a href="https://www.tiktok.com/@viecvatdoanhnghiep" target="_blank" class="text-gray-500 hover:text-black transition-transform duration-200 hover:scale-110"><i class="fab fa-tiktok text-3xl"></i></a>
+                                <a href="https://www.youtube.com/@viecvat" target="_blank" class="text-gray-500 hover:text-red-600 transition-transform duration-200 hover:scale-110"><i class="fab fa-youtube text-3xl"></i></a>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-300"></div>
+                        <div class="flex flex-col sm:flex-row justify-between items-center mt-4">
+                            <a href="tel:0911625718" class="text-lg flex items-center text-gray-700 hover:text-[--brand-blue] mb-2 sm:mb-0"><i class="fas fa-phone-alt text-[--brand-blue] mr-2"></i><span>Call/Zalo: 0911.625.718</span></a>
+                            <a href="mailto:vvdoanhnghiep@gmail.com" class="text-lg flex items-center text-gray-700 hover:text-[--brand-blue]"><i class="fas fa-envelope text-[--brand-blue] mr-2"></i><span>Gmail: vvdoanhnghiep@gmail.com</span></a>
+                        </div>
                     </div>
                 </div>
-
-                <div>
-                    <h3 class="text-xl font-bold mb-4 text-white">LIÊN HỆ</h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="tel:0911625718" class="flex items-center text-gray-300 hover:text-white transition duration-300">
-                                <i class="fas fa-phone-alt w-6 text-center text-blue-400 mr-3"></i>
-                                <span>Call/Zalo: 0911.625.718</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/viecvat/" target="_blank" class="flex items-center text-gray-300 hover:text-white transition duration-300">
-                                <i class="fab fa-facebook-f w-6 text-center text-blue-400 mr-3"></i>
-                                <span>Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:vvdoanhnghiep@gmail.com" class="flex items-center text-gray-300 hover:text-white transition duration-300">
-                                <i class="fas fa-envelope w-6 text-center text-blue-400 mr-3"></i>
-                                <span>Gmail: vvdoanhnghiep@gmail.com</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/@viecvat" target="_blank" class="flex items-center text-gray-300 hover:text-white transition duration-300">
-                                <i class="fab fa-youtube w-6 text-center text-blue-400 mr-3"></i>
-                                <span>Youtube</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.tiktok.com/@viecvatdoanhnghiep" target="_blank" class="flex items-center text-gray-300 hover:text-white transition duration-300">
-                                <i class="fab fa-tiktok w-6 text-center text-blue-400 mr-3"></i>
-                                <span>TikTok</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>© 2023 VIỆC VẶT. Tất cả các quyền được bảo lưu.</p>
+            <div class="border-t border-gray-200 mt-16 pt-8 text-center text-gray-500">
+                <p>© 2025 <span class="text-[--brand-blue] font-semibold">VIỆC VẶT</span>. Tất cả các quyền được bảo lưu.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-        // Simple slider functionality
+        document.getElementById('mobile-menu-button').addEventListener('click', function() { document.getElementById('mobile-menu').classList.toggle('hidden'); });
         const slider = document.querySelector('.slider');
-        const images = [
-            'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
-            'linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)'
-        ];
-        let currentImage = 0;
-        
-        function changeBackground() {
-            currentImage = (currentImage + 1) % images.length;
-            slider.style.background = images[currentImage];
+        if (slider) {
+            const images = ['Images/Slider-01.jpg', 'Images/Slider-02.jpg', 'Images/Slider-03.jpg'];
+            let currentImageIndex = 0;
+            const changeBackground = () => { currentImageIndex = (currentImageIndex + 1) % images.length; slider.style.backgroundImage = `url("${images[currentImageIndex]}")`; };
+            slider.style.backgroundImage = `url("${images[0]}")`;
+            setInterval(changeBackground, 4000);
         }
-        
-        setInterval(changeBackground, 5000);
     </script>
 </body>
 </html>
